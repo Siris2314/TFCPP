@@ -43,8 +43,8 @@ void sigmoidChecker(){
 
 int main(){
     
-    Matrix<float> a({1,2}, {1,2});
-    Matrix<float> a2({1,2}, {2,1});
+    Matrix<float> a({1,2,4,5,6,7}, {3,2});
+    Matrix<float> a2({1,2,4,5,6,7}, {2,3});
     auto m3  = a.dot(a2);
     std::cout<<m3<<std::endl;
     return 0;

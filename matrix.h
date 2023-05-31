@@ -19,18 +19,18 @@ class Matrix{
         }
     }
 
-    bool shapeVerify(const std::vector<int> shape){
-       if(shape.size() != this->shape.size()){
-           return false;
+    bool shapeVerify(const std::vector<T> &value,const std::vector<int> &shape){
+       int pos = 1;
+       for(int i = 0; i<shape.size(); i++){
+           pos *= shape[i];
        }
 
-         for(int i = 0; i < shape.size(); i++){
-              if(shape[i] != this->shape[i]){
-                return false;
-              }
-         }
-
-        return true;
+       if(value.size() == pos){
+           return true;
+       }
+       else{
+           return false;
+       }
     }
 
     std::vector<int> shape_calc(const std::vector<int> &shape){
@@ -72,7 +72,7 @@ class Matrix{
             for(int k = 0; k<col2; k++){
                 T sum = 0;
                 for(int j = 0; j<col1; j++){
-                    sum += this->value[pos + i*col1 + j] * m2.value[pos + j*col2 + k];
+                    sum += this->value[pos + i*col1 + j] * m2.value[j*col2 + k];
                 }
                 final[pos_final + i*col2 + k] = sum;
             }
@@ -110,8 +110,8 @@ class Matrix{
                 pos += stack[i];
             }
             out<<"[ ";
-            for(auto i = 0; this->shape.at(dims); i++){
-                out<<this->value.at(pos+i)<<" ";
+            for(auto i = 0; i<this->shape.at(dims); i++){
+                out<<this->value.at(pos + i)<<" ";
             }
             out<<"]";
             return out;
@@ -159,6 +159,7 @@ class Matrix{
             finalShape.push_back(this->shape[i]);
         }
         finalShape.push_back(m2.shape[1]);
+        size *= m2.shape[1];
         std::vector<T> final(size, 0);
         std::vector<int> idx(0,0);
         auto finalElems = shape_calc(finalShape);
