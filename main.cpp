@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tensor.h"
 #include "mathematical.h"
+#include "matrix.h"
 
 template <typename T>
 void printTensor(std::vector<T> &a){
@@ -41,8 +42,11 @@ void sigmoidChecker(){
 }
 
 int main(){
-    sigmoidChecker();
-
+    
+    Matrix<float> a({1,2}, {1,2});
+    Matrix<float> a2({1,2}, {2,1});
+    auto m3  = a.dot(a2);
+    std::cout<<m3<<std::endl;
     return 0;
 }
 

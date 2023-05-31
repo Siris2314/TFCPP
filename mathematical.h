@@ -1,6 +1,5 @@
 #pragma once
-#include <iostream>
-#include <vector>
+#include "common.h"
 
 template<typename T>
 class Tensor;

@@ -60,6 +60,7 @@ class Tensor{
 
     }
 
+
     Tensor<T> operator + (Tensor<T> &obj){
         this->frontOp = new Add<T>(this,&obj);
         obj.frontOp = this->frontOp;
