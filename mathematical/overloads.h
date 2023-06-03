@@ -1,5 +1,5 @@
 #pragma once 
-#include "common.h"
+#include "../tensor/common.h"
 #include <cmath>
 
 template <typename T>

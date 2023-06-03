@@ -1,7 +1,7 @@
 #include <iostream>
-#include "tensor.h"
-#include "mathematical.h"
-#include "matrix.h"
+#include "./tensor/tensor.h"
+#include "./mathematical/mathematical.h"
+#include "./mathematical/matrix.h"
 
 template <typename T>
 void printTensor(std::vector<T> &a){

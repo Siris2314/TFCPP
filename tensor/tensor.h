@@ -1,10 +1,10 @@
 #pragma once
 
-#include "mathematical_Impl.h"
-#include "multiply.h"
-#include "add.h"
-#include "division.h"
-#include "power.h"
+#include "../mathematical/mathematical_Impl.h"
+#include "../mathematical/multiply.h"
+#include "../mathematical/add.h"
+#include "../mathematical/division.h"
+#include "../mathematical/power.h"
 
 
 template <typename T>

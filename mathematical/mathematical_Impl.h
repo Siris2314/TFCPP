@@ -2,7 +2,7 @@
 #include "mathematical.h"
 #include "multiply.h"
 #include "add.h"
-#include "tensor.h"
+#include "../tensor/tensor.h"
 #include "division.h"
 #include "power.h"
 #include "overloads.h"

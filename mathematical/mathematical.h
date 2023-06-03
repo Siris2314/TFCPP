@@ -1,5 +1,5 @@
 #pragma once
-#include "common.h"
+#include "../tensor/common.h"
 
 template<typename T>
 class Tensor;
